@@ -1,0 +1,6 @@
+__pycache__
+.env
+.abstra
+.venv
+*.json.backup
+.vscode

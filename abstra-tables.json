@@ -1,0 +1,215 @@
+{
+  "tables": [
+    {
+      "id": "8e6f4931-42a2-4783-a015-dac572596394",
+      "name": "employee_register",
+      "columns": [
+        {
+          "id": "b4f2d6ee-e4f3-46a4-bd4e-d5f2ed322351",
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "unique": true,
+          "primaryKey": true,
+          "default": "gen_random_uuid()"
+        },
+        {
+          "id": "f40f72a5-6f4a-4769-88c7-705dc678d1aa",
+          "name": "created_at",
+          "type": "timestamp",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false,
+          "default": "now()"
+        },
+        {
+          "id": "6d3bc35f-6f8f-4957-aa61-bc22736107bd",
+          "name": "name",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "2d194e87-e58f-4f48-867e-de831149e115",
+          "name": "personal_email",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "c891b40b-edcb-4db3-9f1e-420ba35a50c3",
+          "name": "birth_date",
+          "type": "date",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "e0e5b02b-ee1c-43e2-87b4-f7923cea5716",
+          "name": "phone_number",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "1678bb23-927e-4c4a-b53a-2e965be78a03",
+          "name": "identification_number",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "90d85f7c-4803-408c-a450-95df53b175b2",
+          "name": "id_emitted_by",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "71106935-f798-4f25-aac9-c600b8d30c78",
+          "name": "taxpayer_id",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "cae14211-fe8e-40e8-8a18-30e465ef52ae",
+          "name": "country",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "504e71f0-5f49-4ede-9cbc-fda078ba86be",
+          "name": "address",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "65bfdccc-0045-4871-8429-37bb08ece682",
+          "name": "number_address",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "df5a9cee-c9b3-49c6-932a-2bcb7a81f018",
+          "name": "complement_address",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "d16508c7-1df8-4352-a77f-411b2e66d1e3",
+          "name": "district",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "fe1c762a-90d4-4800-8967-9c59aa663e03",
+          "name": "zip_code",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "f19f15ad-4d71-48fc-b8c6-9d56a0c5061d",
+          "name": "shirt_size",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "42bb24e9-7d6e-46e4-9a0d-02cd72489314",
+          "name": "bank_name",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "bb0cc4f5-3831-4fc3-9c75-0d09c74a2fe1",
+          "name": "bank_account_number",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "65bf28c2-e1bf-4ed3-bb40-687afb36d3cc",
+          "name": "bank_branch_code",
+          "type": "varchar",
+          "nullable": false,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "95aa7e01-d1e7-47ea-b14f-7e4048f2ca05",
+          "name": "position",
+          "type": "varchar",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "dbac9cd8-14dc-46d4-a3a4-ca9d2c1519a0",
+          "name": "department",
+          "type": "varchar",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "2ef81938-ce88-4cf9-a9a5-e046ef2cec7b",
+          "name": "started_at",
+          "type": "date",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "cf06cba8-e04f-4e5e-9377-9e8c53224cd3",
+          "name": "internal_email",
+          "type": "varchar",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false
+        },
+        {
+          "id": "576e6d0e-e1af-483b-a1e6-e2d8f3a36ef8",
+          "name": "salary",
+          "type": "float4",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false,
+          "default": "0.0"
+        },
+        {
+          "id": "660a15cb-45b4-4089-8e7e-a037dc3ca234",
+          "name": "weekly_work_hours",
+          "type": "float4",
+          "nullable": true,
+          "unique": false,
+          "primaryKey": false,
+          "default": "0.0"
+        }
+      ],
+      "data": []
+    }
+  ]
+}

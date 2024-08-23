@@ -1,0 +1,416 @@
+{
+  "workspace": {
+    "id": null,
+    "name": "Untitled Workspace",
+    "theme": null,
+    "logo_url": null,
+    "favicon_url": null,
+    "brand_name": null,
+    "main_color": "#1BC7B1",
+    "font_color": null,
+    "font_family": null,
+    "language": "en"
+  },
+  "kanban": {
+    "access_control": {
+      "is_public": false,
+      "required_roles": [
+        "Admin"
+      ]
+    }
+  },
+  "home": {
+    "access_control": {
+      "is_public": true,
+      "required_roles": []
+    }
+  },
+  "jobs": [],
+  "hooks": [],
+  "forms": [
+    {
+      "id": "9712d884-82fc-4d79-b83e-ccc7e8b27941",
+      "path": "employee-registration-form",
+      "title": "Personal Registration Form",
+      "is_initial": true,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "file": "employee_registration_form.py",
+      "workflow_position": [
+        60.0,
+        -12.0
+      ],
+      "transitions": [
+        {
+          "target_id": "ac882fa4-6ba6-4d0a-8c29-2aa7a6bcfa3b",
+          "target_type": "scripts",
+          "type": "forms:finished",
+          "id": "z07lehq",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "assignee_emails",
+        "enabled": false
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    },
+    {
+      "id": "46081eb9-bbec-4074-9708-b9a2ebed8acd",
+      "path": "divergence-on-register-form",
+      "title": "Verify Personal Information Form",
+      "is_initial": false,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "file": "divergence_on_register_form.py",
+      "workflow_position": [
+        780.0,
+        -264.0
+      ],
+      "transitions": [
+        {
+          "target_id": "eeff6cf0-31b8-496a-ae33-7b8f99f37df4",
+          "target_type": "conditions",
+          "type": "forms:finished",
+          "id": "ldrq2nr",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "assignee",
+        "enabled": true
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    },
+    {
+      "id": "df453b48-f0cd-401a-99d0-94a29429be11",
+      "path": "new-form-i56przv",
+      "title": "Internal Registration",
+      "is_initial": false,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "file": "internal_registration_form.py",
+      "workflow_position": [
+        792.0,
+        -36.0
+      ],
+      "transitions": [
+        {
+          "target_id": "7b334bb8-3cf1-4580-89b2-d3841c09321e",
+          "target_type": "forms",
+          "type": "forms:finished",
+          "id": "7aync2y",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "assignee",
+        "enabled": true
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    },
+    {
+      "id": "7b334bb8-3cf1-4580-89b2-d3841c09321e",
+      "path": "new-form-xpo0gnz",
+      "title": "Generate Contract",
+      "is_initial": false,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "file": "generate_contract_form.py",
+      "workflow_position": [
+        792.0,
+        96.0
+      ],
+      "transitions": [
+        {
+          "target_id": "93d35faa-a217-47db-8217-90a95af545b7",
+          "target_type": "forms",
+          "type": "forms:finished",
+          "id": "ku1gf7u",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "assignee",
+        "enabled": true
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    },
+    {
+      "id": "93d35faa-a217-47db-8217-90a95af545b7",
+      "path": "new-form-sk62nyn",
+      "title": "Contract Approval",
+      "is_initial": false,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "file": "contract_approval_form.py",
+      "workflow_position": [
+        792.0,
+        204.0
+      ],
+      "transitions": [
+        {
+          "target_id": "de440cca-cee8-4e31-8311-b1cfc0e51d66",
+          "target_type": "conditions",
+          "type": "forms:finished",
+          "id": "wug707x",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "employee_approval_email",
+        "enabled": true
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    },
+    {
+      "id": "37c72d40-c045-41b9-a35c-c2066ee9be4c",
+      "path": "new-form-z5sha6x",
+      "title": "Partial Personal Registration Form",
+      "is_initial": false,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "file": "partial_employee_registration_form.py",
+      "workflow_position": [
+        1116.0,
+        -432.0
+      ],
+      "transitions": [
+        {
+          "target_id": "ac882fa4-6ba6-4d0a-8c29-2aa7a6bcfa3b",
+          "target_type": "scripts",
+          "type": "forms:finished",
+          "id": "q6a956o",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "employee_approval_email",
+        "enabled": true
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    },
+    {
+      "id": "d6e146bc-ca21-4839-9511-7d54be60c168",
+      "path": "new-form-fv2w6mn",
+      "title": "Manual Contract Upload",
+      "is_initial": false,
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "file": "manual_contract_upload_form.py",
+      "workflow_position": [
+        1116.0,
+        492.0
+      ],
+      "transitions": [
+        {
+          "target_id": "fff731ec-a047-455b-b028-e271b01f5be3",
+          "target_type": "conditions",
+          "type": "forms:finished",
+          "id": "s5jxyo6",
+          "condition_value": null
+        }
+      ],
+      "notification_trigger": {
+        "variable_name": "assignee",
+        "enabled": true
+      },
+      "access_control": {
+        "is_public": false,
+        "required_roles": []
+      }
+    }
+  ],
+  "scripts": [
+    {
+      "id": "ac882fa4-6ba6-4d0a-8c29-2aa7a6bcfa3b",
+      "file": "ai_personal_info_check.py",
+      "title": "Abstra AI Personal Information Check",
+      "is_initial": false,
+      "workflow_position": [
+        60.0,
+        -168.0
+      ],
+      "transitions": [
+        {
+          "target_id": "bf346c28-3df9-4de3-b2f2-fc4c45aad375",
+          "target_type": "conditions",
+          "type": "scripts:finished",
+          "id": "v24y7jv",
+          "condition_value": null
+        }
+      ]
+    },
+    {
+      "id": "d9256792-9112-4fa8-af9e-6d5c9051de92",
+      "file": "send_contract_to_sign.py",
+      "title": "Contract Signature",
+      "is_initial": false,
+      "workflow_position": [
+        540.0,
+        492.0
+      ],
+      "transitions": []
+    }
+  ],
+  "iterators": [],
+  "conditions": [
+    {
+      "id": "bf346c28-3df9-4de3-b2f2-fc4c45aad375",
+      "variable_name": "is_register_info_match",
+      "workflow_position": [
+        432.0,
+        -168.0
+      ],
+      "transitions": [
+        {
+          "target_id": "46081eb9-bbec-4074-9708-b9a2ebed8acd",
+          "target_type": "forms",
+          "type": "conditions:patternMatched",
+          "id": "4zhpinw",
+          "condition_value": "False"
+        },
+        {
+          "target_id": "df453b48-f0cd-401a-99d0-94a29429be11",
+          "target_type": "forms",
+          "type": "conditions:patternMatched",
+          "id": "3uq9r8z",
+          "condition_value": "True"
+        }
+      ]
+    },
+    {
+      "id": "eeff6cf0-31b8-496a-ae33-7b8f99f37df4",
+      "variable_name": "is_manual_checked",
+      "workflow_position": [
+        1116.0,
+        -156.0
+      ],
+      "transitions": [
+        {
+          "target_id": "df453b48-f0cd-401a-99d0-94a29429be11",
+          "target_type": "forms",
+          "type": "conditions:patternMatched",
+          "id": "wnmbvb4",
+          "condition_value": "True"
+        },
+        {
+          "target_id": "37c72d40-c045-41b9-a35c-c2066ee9be4c",
+          "target_type": "forms",
+          "type": "conditions:patternMatched",
+          "id": "xyw8u2m",
+          "condition_value": "False"
+        }
+      ]
+    },
+    {
+      "id": "de440cca-cee8-4e31-8311-b1cfc0e51d66",
+      "variable_name": "is_contract_approved",
+      "workflow_position": [
+        792.0,
+        324.0
+      ],
+      "transitions": [
+        {
+          "target_id": "d6e146bc-ca21-4839-9511-7d54be60c168",
+          "target_type": "forms",
+          "type": "conditions:patternMatched",
+          "id": "n6pvk3b",
+          "condition_value": "False"
+        },
+        {
+          "target_id": "d9256792-9112-4fa8-af9e-6d5c9051de92",
+          "target_type": "scripts",
+          "type": "conditions:patternMatched",
+          "id": "4dzg40q",
+          "condition_value": "True"
+        }
+      ]
+    },
+    {
+      "id": "fff731ec-a047-455b-b028-e271b01f5be3",
+      "variable_name": "give_hiring",
+      "workflow_position": [
+        1116.0,
+        204.0
+      ],
+      "transitions": [
+        {
+          "target_id": "93d35faa-a217-47db-8217-90a95af545b7",
+          "target_type": "forms",
+          "type": "conditions:patternMatched",
+          "id": "p2bv2l9",
+          "condition_value": "False"
+        }
+      ]
+    }
+  ],
+  "version": "11.0"
+}

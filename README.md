@@ -9,7 +9,7 @@ Integrations:
 
 To customize this template for your team and build a lot more, [book a demonstration here.](https://meet.abstra.app/demo?url=template-employee-registration)
 
-![A contract generator onboarding workflow built in Abstra](https://github.com/user-attachments/assets/c38cccdc-0279-4054-a93f-450c05454176)
+![A contract generator onboarding workflow built in Abstra](https://github.com/user-attachments/assets/673ea8bb-0553-4000-93b0-bd1f7223ff8a)
 
 ## Initial Configuration
 To use this project, some initial configurations are necessary:
@@ -75,22 +75,22 @@ To implement this system use the following scripts:
 
 ### Employee Registration:
 For registering a employee and collecting personal data about it, use:
-  - **employee_registration_form.py**: Script to generate a form that collects personal data from a new employee, including document pictures.
+  - **form_personal_registration.py**: Script to generate a form that collects personal data from a new employee, including document pictures.
 
 ### Verification of Information:
-  - **ai_personal_info_check.py**: Script to verify if the personal information provided matches the information in the document pictures.
-  - **divergence_on_register_form.py**: Script to generate a form for manual approval of the provided information (if the AI detects any mismatch).
-  - **partial_employee_registration_form.py**: Script to generate a form for correcting the provided information with potential errors (if the information was rejected in the manual approval step).
+  - **tasklet_abstra_ai_personal_info_check.py**: Script to verify if the personal information provided matches the information in the document pictures.
+  - **form_verify_personal_information.py**: Script to generate a form for manual approval of the provided information (if the AI detects any mismatch).
+  - **form_partial_personal_registration.py**: Script to generate a form for correcting the provided information with potential errors (if the information was rejected in the manual approval step).
 
 ### Intern Registration:
-  - **internal_registration_form.py**: Script to generate a form to be filled out by a company member, collecting the employee's position information.
+  - **form_internal_registration.py**: Script to generate a form to be filled out by a company member, collecting the employee's position information.
 
 ### Contract Generation and Approval:
-  - **generate_contract_form.py**: Script to automatically generate a contract based on either the existing template in the folder or a new template uploaded via a form.
-  - **contract_approval_form.py**: Script to generate a form that allows the employee to review the contract, approve or reject it, and provide comments.
-  - **manual_contract_upload_form.py**: Script to generate a form where the employer can review comments made by the employee if the contract was rejected. The employer can then decide to either abandon the hiring process or upload a modified contract.
+  - **form_generate_contract.py**: Script to automatically generate a contract based on either the existing template in the folder or a new template uploaded via a form.
+  - **form_contract_approval.py**: Script to generate a form that allows the employee to review the contract, approve or reject it, and provide comments.
+  - **form_manual_contract_upload.py**: Script to generate a form where the employer can review comments made by the employee if the contract was rejected. The employer can then decide to either abandon the hiring process or upload a modified contract.
 
 ### Contract Signing:
-  - **send_contract_to_sign.py**: Script to send the contract via email for signing by the parties involved using DocuSign.
+  - **tasklet_contract_signature.py**: Script to send the contract via email for signing by the parties involved using DocuSign.
 
 If you're interested in customizing this template for your team in under 30 minutes, [book a customization session here.](https://meet.abstra.app/demo?url=template-employee-registration)

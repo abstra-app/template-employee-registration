@@ -1,4 +1,4 @@
-import abstra.workflows as aw
+from abstra.tasks import get_trigger_task
 import os
 import base64
 import dotenv
@@ -9,10 +9,13 @@ from abstra.connectors import get_access_token
 
 dotenv.load_dotenv()
 
-# get variables from workflow
-employee_approval_email = aw.get_data("employee_approval_email")
-contract_dict = aw.get_data("contract_path")
-register_dict = aw.get_data("register_info")
+# get variables from task payload
+task = get_trigger_task()
+payload = task.get_payload()
+
+employee_approval_email = payload["employee_approval_email"]
+contract_dict = payload["contract_path"]
+register_dict = payload["register_info"]
 
 contract_filepath = contract_dict["contract_filepath"]
 contract_filename = contract_dict["contract_filename"]
@@ -104,3 +107,5 @@ try:
     logger.success(f"Sign Requested. Envelope ID: {results.envelope_id}. Status: {results.status}")
 except ApiException as e:
     logger.error(f"Error regarding docsign EnvelopesApi use: {e}")
+
+task.complete()
